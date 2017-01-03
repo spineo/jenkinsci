@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson>
+  <disabledAdministrativeMonitors/>
+  <version>1.0</version>
+  <numExecutors>2</numExecutors>
+  <mode>NORMAL</mode>
+  <useSecurity>true</useSecurity>
+  <authorizationStrategy class="hudson.security.GlobalMatrixAuthorizationStrategy">
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create:svpineo</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete:svpineo</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains:svpineo</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:svpineo</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View:svpineo</permission>
+    <permission>hudson.model.Computer.Build:svpineo</permission>
+    <permission>hudson.model.Computer.Configure:svpineo</permission>
+    <permission>hudson.model.Computer.Connect:svpineo</permission>
+    <permission>hudson.model.Computer.Create:svpineo</permission>
+    <permission>hudson.model.Computer.Delete:svpineo</permission>
+    <permission>hudson.model.Computer.Disconnect:svpineo</permission>
+    <permission>hudson.model.Computer.Provision:svpineo</permission>
+    <permission>hudson.model.Hudson.Administer:svpineo</permission>
+    <permission>hudson.model.Hudson.ConfigureUpdateCenter:svpineo</permission>
+    <permission>hudson.model.Hudson.Read:svpineo</permission>
+    <permission>hudson.model.Hudson.RunScripts:svpineo</permission>
+    <permission>hudson.model.Hudson.UploadPlugins:svpineo</permission>
+    <permission>hudson.model.Item.Build:svpineo</permission>
+    <permission>hudson.model.Item.Cancel:svpineo</permission>
+    <permission>hudson.model.Item.Configure:svpineo</permission>
+    <permission>hudson.model.Item.Create:svpineo</permission>
+    <permission>hudson.model.Item.Delete:svpineo</permission>
+    <permission>hudson.model.Item.Discover:svpineo</permission>
+    <permission>hudson.model.Item.Move:svpineo</permission>
+    <permission>hudson.model.Item.Read:svpineo</permission>
+    <permission>hudson.model.Item.Workspace:svpineo</permission>
+    <permission>hudson.model.Run.Delete:svpineo</permission>
+    <permission>hudson.model.Run.Replay:svpineo</permission>
+    <permission>hudson.model.Run.Update:svpineo</permission>
+    <permission>hudson.model.View.Configure:svpineo</permission>
+    <permission>hudson.model.View.Create:svpineo</permission>
+    <permission>hudson.model.View.Delete:svpineo</permission>
+    <permission>hudson.model.View.Read:svpineo</permission>
+    <permission>hudson.scm.SCM.Tag:svpineo</permission>
+  </authorizationStrategy>
+  <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
+    <disableSignup>true</disableSignup>
+    <enableCaptcha>false</enableCaptcha>
+  </securityRealm>
+  <disableRememberMe>false</disableRememberMe>
+  <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
+  <workspaceDir>${JENKINS_HOME}/workspace/${ITEM_FULLNAME}</workspaceDir>
+  <buildsDir>${ITEM_ROOTDIR}/builds</buildsDir>
+  <markupFormatter class="hudson.markup.EscapedMarkupFormatter"/>
+  <jdks/>
+  <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
+  <myViewsTabBar class="hudson.views.DefaultMyViewsTabBar"/>
+  <clouds/>
+  <scmCheckoutRetryCount>0</scmCheckoutRetryCount>
+  <views>
+    <hudson.model.AllView>
+      <owner class="hudson" reference="../../.."/>
+      <name>All</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+    </hudson.model.AllView>
+  </views>
+  <primaryView>All</primaryView>
+  <slaveAgentPort>-1</slaveAgentPort>
+  <label></label>
+  <crumbIssuer class="hudson.security.csrf.DefaultCrumbIssuer">
+    <excludeClientIPFromCrumb>false</excludeClientIPFromCrumb>
+  </crumbIssuer>
+  <nodeProperties/>
+  <globalNodeProperties/>
+</hudson>
