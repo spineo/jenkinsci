@@ -20,17 +20,23 @@
     <permission>hudson.model.Computer.Provision:svpineo</permission>
     <permission>hudson.model.Hudson.Administer:svpineo</permission>
     <permission>hudson.model.Hudson.ConfigureUpdateCenter:svpineo</permission>
+    <permission>hudson.model.Hudson.Read:appadmin</permission>
     <permission>hudson.model.Hudson.Read:svpineo</permission>
     <permission>hudson.model.Hudson.RunScripts:svpineo</permission>
     <permission>hudson.model.Hudson.UploadPlugins:svpineo</permission>
+    <permission>hudson.model.Item.Build:github</permission>
     <permission>hudson.model.Item.Build:svpineo</permission>
     <permission>hudson.model.Item.Cancel:svpineo</permission>
     <permission>hudson.model.Item.Configure:svpineo</permission>
     <permission>hudson.model.Item.Create:svpineo</permission>
     <permission>hudson.model.Item.Delete:svpineo</permission>
+    <permission>hudson.model.Item.Discover:appadmin</permission>
     <permission>hudson.model.Item.Discover:svpineo</permission>
     <permission>hudson.model.Item.Move:svpineo</permission>
+    <permission>hudson.model.Item.Read:appadmin</permission>
+    <permission>hudson.model.Item.Read:github</permission>
     <permission>hudson.model.Item.Read:svpineo</permission>
+    <permission>hudson.model.Item.Workspace:appadmin</permission>
     <permission>hudson.model.Item.Workspace:svpineo</permission>
     <permission>hudson.model.Run.Delete:svpineo</permission>
     <permission>hudson.model.Run.Replay:svpineo</permission>
