@@ -1,7 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <hudson>
-  <disabledAdministrativeMonitors/>
-  <version>1.0</version>
+  <disabledAdministrativeMonitors>
+    <string>OldData</string>
+  </disabledAdministrativeMonitors>
+  <version>2.32.1</version>
   <numExecutors>2</numExecutors>
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
@@ -17,7 +19,6 @@
     <permission>hudson.model.Computer.Create:svpineo</permission>
     <permission>hudson.model.Computer.Delete:svpineo</permission>
     <permission>hudson.model.Computer.Disconnect:svpineo</permission>
-    <permission>hudson.model.Computer.Provision:svpineo</permission>
     <permission>hudson.model.Hudson.Administer:svpineo</permission>
     <permission>hudson.model.Hudson.ConfigureUpdateCenter:svpineo</permission>
     <permission>hudson.model.Hudson.Read:appadmin</permission>
@@ -60,6 +61,7 @@
   <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
   <myViewsTabBar class="hudson.views.DefaultMyViewsTabBar"/>
   <clouds/>
+  <quietPeriod>5</quietPeriod>
   <scmCheckoutRetryCount>0</scmCheckoutRetryCount>
   <views>
     <hudson.model.AllView>

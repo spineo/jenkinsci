@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<org.jenkins.plugins.lockableresources.LockableResourcesManager plugin="lockable-resources@1.11">
+  <resources>
+    <org.jenkins.plugins.lockableresources.LockableResource>
+      <name>resource1</name>
+      <description>Test Resource 1</description>
+      <labels>TestResources</labels>
+      <queueItemId>0</queueItemId>
+      <queuingStarted>0</queuingStarted>
+      <queuedContexts/>
+    </org.jenkins.plugins.lockableresources.LockableResource>
+    <org.jenkins.plugins.lockableresources.LockableResource>
+      <name>resource2</name>
+      <description>Test Resource 2</description>
+      <labels>TestResources</labels>
+      <queueItemId>0</queueItemId>
+      <queuingStarted>0</queuingStarted>
+      <queuedContexts/>
+    </org.jenkins.plugins.lockableresources.LockableResource>
+    <org.jenkins.plugins.lockableresources.LockableResource>
+      <name>resource3</name>
+      <description>Test Resource 3</description>
+      <labels>TestResources</labels>
+      <queueItemId>0</queueItemId>
+      <queuingStarted>0</queuingStarted>
+      <queuedContexts/>
+    </org.jenkins.plugins.lockableresources.LockableResource>
+  </resources>
+  <queuedContexts/>
+</org.jenkins.plugins.lockableresources.LockableResourcesManager>
