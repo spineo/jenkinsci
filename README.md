@@ -1,4 +1,4 @@
 # jenkinsci
 Jenkins Continuous Integration Configuration
 
-Jenkins CI (configuration) currently supports the App database deployment. It is currently hosted on an Amazon AWS (Lightsail) instance and configured to trigger projects using Git polling for changes in the repository.
+Jenkins CI (configuration) currently supports the App database deployment. It is currently hosted on an Amazon AWS (Lightsail) instance.
