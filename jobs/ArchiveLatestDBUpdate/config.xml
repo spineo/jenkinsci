@@ -13,7 +13,7 @@
       </strategy>
     </jenkins.model.BuildDiscarderProperty>
     <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.25.0">
-      <projectUrl>https://github.com/spineo/Databases/</projectUrl>
+      <projectUrl>https://github.com/spineo/databases/</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
   </properties>
@@ -21,7 +21,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>git@github.com:spineo/Databases.git</url>
+        <url>git@github.com:spineo/databases.git</url>
         <credentialsId>Database</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
@@ -34,7 +34,7 @@
     <submoduleCfg class="list"/>
     <extensions>
       <hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
-        <relativeTargetDir>Databases</relativeTargetDir>
+        <relativeTargetDir>databases</relativeTargetDir>
       </hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
     </extensions>
   </scm>
@@ -53,12 +53,12 @@
     <hudson.tasks.Shell>
       <command># Force exit status 0
 #
-rm -rf ./Databases || echo &quot;OK&quot;
+rm -rf ./databases || echo &quot;OK&quot;
 
 
 # Rerun this to use the LFS tool for large files
 #
-git lfs clone git@github.com:spineo/Databases.git</command>
+git lfs clone git@github.com:spineo/databases.git</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
