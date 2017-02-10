@@ -6,7 +6,7 @@
       <description>Test Resource 1</description>
       <labels>TestResources</labels>
       <queueItemId>0</queueItemId>
-      <queuingStarted>0</queuingStarted>
+      <queuingStarted>1486591605</queuingStarted>
       <queuedContexts/>
     </org.jenkins.plugins.lockableresources.LockableResource>
     <org.jenkins.plugins.lockableresources.LockableResource>
@@ -14,7 +14,7 @@
       <description>Test Resource 2</description>
       <labels>TestResources</labels>
       <queueItemId>0</queueItemId>
-      <queuingStarted>0</queuingStarted>
+      <queuingStarted>1486591605</queuingStarted>
       <queuedContexts/>
     </org.jenkins.plugins.lockableresources.LockableResource>
     <org.jenkins.plugins.lockableresources.LockableResource>
@@ -22,7 +22,7 @@
       <description>Test Resource 3</description>
       <labels>TestResources</labels>
       <queueItemId>0</queueItemId>
-      <queuingStarted>0</queuingStarted>
+      <queuingStarted>1486591605</queuingStarted>
       <queuedContexts/>
     </org.jenkins.plugins.lockableresources.LockableResource>
   </resources>

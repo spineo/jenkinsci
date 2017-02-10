@@ -7,49 +7,130 @@
   <numExecutors>2</numExecutors>
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
-  <authorizationStrategy class="hudson.security.GlobalMatrixAuthorizationStrategy">
-    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create:svpineo</permission>
-    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete:svpineo</permission>
-    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains:svpineo</permission>
-    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:svpineo</permission>
-    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View:svpineo</permission>
-    <permission>hudson.model.Computer.Build:svpineo</permission>
-    <permission>hudson.model.Computer.Configure:svpineo</permission>
-    <permission>hudson.model.Computer.Connect:svpineo</permission>
-    <permission>hudson.model.Computer.Create:svpineo</permission>
-    <permission>hudson.model.Computer.Delete:svpineo</permission>
-    <permission>hudson.model.Computer.Disconnect:svpineo</permission>
-    <permission>hudson.model.Hudson.Administer:svpineo</permission>
-    <permission>hudson.model.Hudson.ConfigureUpdateCenter:svpineo</permission>
-    <permission>hudson.model.Hudson.Read:appadmin</permission>
-    <permission>hudson.model.Hudson.Read:plugins</permission>
-    <permission>hudson.model.Hudson.Read:svpineo</permission>
-    <permission>hudson.model.Hudson.RunScripts:svpineo</permission>
-    <permission>hudson.model.Hudson.UploadPlugins:svpineo</permission>
-    <permission>hudson.model.Item.Build:github</permission>
-    <permission>hudson.model.Item.Build:svpineo</permission>
-    <permission>hudson.model.Item.Cancel:svpineo</permission>
-    <permission>hudson.model.Item.Configure:svpineo</permission>
-    <permission>hudson.model.Item.Create:svpineo</permission>
-    <permission>hudson.model.Item.Delete:svpineo</permission>
-    <permission>hudson.model.Item.Discover:appadmin</permission>
-    <permission>hudson.model.Item.Discover:svpineo</permission>
-    <permission>hudson.model.Item.Move:svpineo</permission>
-    <permission>hudson.model.Item.Read:appadmin</permission>
-    <permission>hudson.model.Item.Read:github</permission>
-    <permission>hudson.model.Item.Read:plugins</permission>
-    <permission>hudson.model.Item.Read:svpineo</permission>
-    <permission>hudson.model.Item.Workspace:appadmin</permission>
-    <permission>hudson.model.Item.Workspace:plugins</permission>
-    <permission>hudson.model.Item.Workspace:svpineo</permission>
-    <permission>hudson.model.Run.Delete:svpineo</permission>
-    <permission>hudson.model.Run.Replay:svpineo</permission>
-    <permission>hudson.model.Run.Update:svpineo</permission>
-    <permission>hudson.model.View.Configure:svpineo</permission>
-    <permission>hudson.model.View.Create:svpineo</permission>
-    <permission>hudson.model.View.Delete:svpineo</permission>
-    <permission>hudson.model.View.Read:svpineo</permission>
-    <permission>hudson.scm.SCM.Tag:svpineo</permission>
+  <authorizationStrategy class="com.michelin.cio.hudson.plugins.rolestrategy.RoleBasedAuthorizationStrategy">
+    <roleMap type="globalRoles">
+      <role name="Anonymous" pattern=".*">
+        <permissions>
+          <permission>hudson.model.Hudson.Read</permission>
+        </permissions>
+        <assignedSIDs>
+          <sid>anonymous</sid>
+        </assignedSIDs>
+      </role>
+      <role name="account" pattern=".*">
+        <permissions>
+          <permission>hudson.model.Hudson.Read</permission>
+        </permissions>
+        <assignedSIDs/>
+      </role>
+      <role name="admin" pattern=".*">
+        <permissions>
+          <permission>hudson.scm.SCM.Tag</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete</permission>
+          <permission>hudson.model.View.Delete</permission>
+          <permission>hudson.model.Computer.Disconnect</permission>
+          <permission>hudson.model.Computer.Configure</permission>
+          <permission>hudson.model.Run.Replay</permission>
+          <permission>hudson.model.Item.Configure</permission>
+          <permission>hudson.model.Item.Workspace</permission>
+          <permission>hudson.model.View.Create</permission>
+          <permission>hudson.model.Run.Delete</permission>
+          <permission>hudson.model.View.Read</permission>
+          <permission>hudson.model.Computer.Provision</permission>
+          <permission>hudson.model.Hudson.UploadPlugins</permission>
+          <permission>hudson.model.Computer.Connect</permission>
+          <permission>hudson.model.Item.Discover</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create</permission>
+          <permission>hudson.model.Hudson.Read</permission>
+          <permission>hudson.model.Item.Delete</permission>
+          <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Reserve</permission>
+          <permission>hudson.model.View.Configure</permission>
+          <permission>hudson.model.Hudson.ConfigureUpdateCenter</permission>
+          <permission>hudson.model.Item.Move</permission>
+          <permission>hudson.model.Item.Read</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains</permission>
+          <permission>hudson.model.Hudson.Administer</permission>
+          <permission>hudson.model.Computer.Delete</permission>
+          <permission>hudson.model.Hudson.RunScripts</permission>
+          <permission>hudson.model.Computer.Create</permission>
+          <permission>hudson.model.Item.Create</permission>
+          <permission>hudson.model.Item.Build</permission>
+          <permission>hudson.model.Computer.Build</permission>
+          <permission>hudson.model.Item.Cancel</permission>
+          <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Unlock</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update</permission>
+          <permission>hudson.model.Run.Update</permission>
+        </permissions>
+        <assignedSIDs>
+          <sid>svpineo</sid>
+        </assignedSIDs>
+      </role>
+      <role name="appadmin" pattern=".*">
+        <permissions>
+          <permission>hudson.model.Item.Read</permission>
+          <permission>hudson.model.Item.Discover</permission>
+          <permission>hudson.model.Item.Build</permission>
+          <permission>hudson.model.Hudson.Read</permission>
+          <permission>hudson.model.Item.Workspace</permission>
+        </permissions>
+        <assignedSIDs>
+          <sid>appadmin</sid>
+        </assignedSIDs>
+      </role>
+      <role name="svpineo" pattern=".*">
+        <permissions>
+          <permission>hudson.scm.SCM.Tag</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete</permission>
+          <permission>hudson.model.View.Delete</permission>
+          <permission>hudson.model.Computer.Disconnect</permission>
+          <permission>hudson.model.Computer.Configure</permission>
+          <permission>hudson.model.Run.Replay</permission>
+          <permission>hudson.model.Item.Configure</permission>
+          <permission>hudson.model.Item.Workspace</permission>
+          <permission>hudson.model.View.Create</permission>
+          <permission>hudson.model.Run.Delete</permission>
+          <permission>hudson.model.View.Read</permission>
+          <permission>hudson.model.Computer.Provision</permission>
+          <permission>hudson.model.Hudson.UploadPlugins</permission>
+          <permission>hudson.model.Computer.Connect</permission>
+          <permission>hudson.model.Item.Discover</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create</permission>
+          <permission>hudson.model.Hudson.Read</permission>
+          <permission>hudson.model.Item.Delete</permission>
+          <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Reserve</permission>
+          <permission>hudson.model.View.Configure</permission>
+          <permission>hudson.model.Hudson.ConfigureUpdateCenter</permission>
+          <permission>hudson.model.Item.Move</permission>
+          <permission>hudson.model.Item.Read</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains</permission>
+          <permission>hudson.model.Hudson.Administer</permission>
+          <permission>hudson.model.Computer.Delete</permission>
+          <permission>hudson.model.Hudson.RunScripts</permission>
+          <permission>hudson.model.Computer.Create</permission>
+          <permission>hudson.model.Item.Create</permission>
+          <permission>hudson.model.Item.Build</permission>
+          <permission>hudson.model.Computer.Build</permission>
+          <permission>hudson.model.Item.Cancel</permission>
+          <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Unlock</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update</permission>
+          <permission>hudson.model.Run.Update</permission>
+        </permissions>
+        <assignedSIDs/>
+      </role>
+    </roleMap>
+    <roleMap type="projectRoles">
+      <role name="AccountReq" pattern="AccountRequest">
+        <permissions>
+          <permission>hudson.model.Item.Read</permission>
+          <permission>hudson.model.Item.Build</permission>
+        </permissions>
+        <assignedSIDs>
+          <sid>anonymous</sid>
+        </assignedSIDs>
+      </role>
+    </roleMap>
   </authorizationStrategy>
   <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
     <disableSignup>true</disableSignup>
@@ -76,6 +157,29 @@
       <filterQueue>false</filterQueue>
       <properties class="hudson.model.View$PropertyList"/>
     </hudson.model.AllView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Pipelines</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>MultiBranchPipeline</string>
+        <string>MultiBranchPipelineDefaults</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+      <recurse>false</recurse>
+    </listView>
   </views>
   <primaryView>All</primaryView>
   <slaveAgentPort>-1</slaveAgentPort>

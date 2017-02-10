@@ -2,7 +2,7 @@
 <hudson.plugins.emailext.ExtendedEmailPublisherDescriptor plugin="email-ext@2.53">
   <useSsl>false</useSsl>
   <charset>UTF-8</charset>
-  <defaultContentType>text/plain</defaultContentType>
+  <defaultContentType>text/html</defaultContentType>
   <defaultSubject>$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!</defaultSubject>
   <defaultBody>$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:&#xd;
 &#xd;

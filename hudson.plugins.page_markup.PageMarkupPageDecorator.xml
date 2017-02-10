@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.plugins.page__markup.PageMarkupPageDecorator plugin="page-markup@0.3">
+  <headerHtmlFragment>&lt;table cellpadding=0 cellspacing=0 style=&quot;width:100%; line-height:2em&quot;&gt;
+&lt;tr&gt;
+&lt;td align=&quot;right&quot; style=&quot;background:black; line-height:2em&quot;&gt;
+&lt;span style=&quot;color:#FFFFFF; padding-right:30px; vertical-align:bottom;&quot;&gt;&lt;a style=&quot;color:#FFFFFF; text-decoration:none;&quot; href=&quot;/userContent/AccountReq.html&quot;&gt;Request account&lt;/a&gt;&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;</headerHtmlFragment>
+  <footerHtmlFragment></footerHtmlFragment>
+</hudson.plugins.page__markup.PageMarkupPageDecorator>
